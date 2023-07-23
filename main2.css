@@ -10,17 +10,27 @@ main {
 }
 
 div {
-    border: solid 1px red;
+    border: solid 1px #3c3c3c;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: goldenrod;
 }
 
-div:nth-child(10) {
-    background-color: purple;
-    color: white;
-    /*grid-column-start: 3;*/
-    /*grid-column-end: 5;*/
-    grid-column: 3/5;
+@media (max-width: 600px) {
+    div:nth-child(10) {
+        background-color: purple;
+        color: white;
+        /*grid-column-start: 3;*/
+        /*grid-column-end: 5;*/
+        grid-column: 3/5;
+    }
+
+    div:nth-child(6) {
+        background-color: red;
+        color: white;
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
 }
+
