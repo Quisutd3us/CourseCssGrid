@@ -1,0 +1,50 @@
+main > * {
+    background-color: goldenrod;
+    padding: 10px;
+    font-size: 3rem;
+}
+
+/*define grid container*/
+main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+            "encabezado"
+            "izquierda"
+            "contenido"
+            "derecha"
+            "pie";
+}
+
+/*desktop*/
+
+@media (min-width: 500px) {
+    main{
+        grid-template-areas:
+            "encabezado encabezado encabezado"
+            "izquierda contenido derecha"
+            "pie pie .";
+    }
+}
+
+/*named the elements*/
+
+header {
+    grid-area: encabezado;
+}
+
+aside:first-of-type {
+    grid-area: izquierda;
+}
+
+article {
+    grid-area: contenido;
+}
+
+aside:last-of-type {
+    grid-area: derecha;
+}
+
+footer {
+    grid-area: pie;
+}
