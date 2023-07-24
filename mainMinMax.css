@@ -1,0 +1,22 @@
+main{
+  height: 100vh;
+  background-color: lawngreen;
+  font-size: 1.5rem;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns:
+          /*1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr */
+          /*repeat(8,1fr);*/
+          /*repeat(8,minmax(10px,1fr));*/
+        /*repeat(4, 8px minmax(10%,1fr));*/
+          repeat(8,minmax(min-content,max-content));
+;
+}
+
+div{
+  border: solid 1px #3c3c3c;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
