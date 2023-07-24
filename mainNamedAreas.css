@@ -1,0 +1,103 @@
+main {
+  height: 100vh;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 1.5rem;
+  background-color: lawngreen;
+  display: grid;
+}
+
+main > * {
+  border: solid 1px #3c3c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*naming Areas*/
+header {
+  grid-area: header;
+}
+
+aside:first-of-type {
+  grid-area: left-aside;
+}
+
+article {
+  grid-area: articles;
+}
+
+aside:last-of-type {
+  grid-area: right-aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*// Small devices (small phones, 300px and up)*/
+@media (min-width: 300px) {
+  main {
+    grid-template-areas:
+      "header"
+      "articles"
+      "right-aside"
+      "left-aside"
+      "footer";
+  }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  main {
+    grid-template-areas:
+      "header"
+      "articles"
+      "left-aside"
+      "right-aside"
+      "footer";
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  main {
+    grid-template-areas:
+      "header header"
+      "articles articles"
+      "left-aside right-aside"
+      "footer footer";
+    grid-template-rows: 25% 2fr 1fr 10% ;
+
+  }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*// X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  main {
+    grid-template-areas:
+      "header header articles "
+      "left-aside  right-aside articles"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows:  1fr 2fr 100px;
+  }
+
+}
+
+/*// XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+  main {
+    grid-template-areas:
+      "left-aside header header "
+      "left-aside articles  right-aside"
+      "footer articles right-aside";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows:  1fr 2fr 100px;
+  }
+}
+
