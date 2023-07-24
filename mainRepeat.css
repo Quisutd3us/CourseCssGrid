@@ -1,0 +1,27 @@
+main{
+  height: 100vh;
+  background-color: lawngreen;
+  display: grid;
+  grid-template-columns:
+    /*repeat(4,*/ /*  minmax(100px,1fr)*/ /*  minmax(50px,1fr)*/ /*  minmax(20px,1fr)*/ /*);*/
+    [start]
+      repeat(4,
+    [col-lg-start] minmax(100px,1fr)
+    [col-lg-end col-md-start] minmax(50px,1fr)
+    [col-md-end col-sm-start] minmax(20px,1fr)
+    );
+    [end]
+}
+
+div{
+  border: solid 1px #3c3c3c;
+  background-color: goldenrod;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+div:nth-child(1){
+  background-color: purple;
+  grid-column: col-lg-start / end;
+}
