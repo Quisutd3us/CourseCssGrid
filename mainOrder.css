@@ -1,0 +1,25 @@
+main{
+  display: grid;
+  height: 100vh;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(30px, auto));
+}
+
+div{
+  border: solid 1px #3c3c3c;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div:nth-child(4){
+  background-color: purple;
+  color: white;
+  order:1
+}
+
+div:nth-child(7){
+  background-color: greenyellow;
+  order:2
+}
