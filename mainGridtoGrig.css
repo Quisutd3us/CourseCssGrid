@@ -1,0 +1,27 @@
+#grid1{
+  height: 100vh;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit,minmax(100px, auto));
+}
+
+#grid1>div{
+  border: solid 1px black;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#grid2{
+  border: dashed 2px #3c3c3c ;
+  background-color: transparent;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(2,auto);
+}
+
+#grid2>div{
+  border: solid 1px black;
+  background-color: purple;
+}
