@@ -7,8 +7,7 @@ main {
     "header header header"
     "right contain left1"
     "right contain left2"
-    "right footer footer"
-;
+    "right footer footer";
   grid-template-rows:
     [start] 1fr [contain-start] 2fr 1fr 1fr [end];
   grid-template-columns:
@@ -24,25 +23,26 @@ main > * {
 
 /*define areas*/
 
-header{
+header {
   grid-area: header;
 }
-aside:first-of-type{
+
+aside:first-of-type {
   grid-area: right;
 }
 
-article{
+article {
   grid-area: contain;
 }
 
-aside:nth-of-type(2){
+aside:nth-of-type(2) {
   grid-area: left1;
 }
 
-aside:last-of-type{
+aside:last-of-type {
   grid-area: left2;
 }
 
-footer{
+footer {
   grid-area: footer;
 }
